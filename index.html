@@ -16,82 +16,44 @@
     axisY: {
         title: "Score"
     },
+    legend: {
+        dockInsidePlotArea: true,
+        verticalAlign: "top",
+        horizontalAlign: "left"
+    },
     data: {
-        labels: ["Sept 1", "Sept 3", "Sept 9", "Sept 10", "Sept 16", "Sept 17", "Sept 20", "Sept 23", "Sept 27", "Oct 4", "Oct 7", "Oct 11", "Oct 13", "Oct 17", "Oct 21"],
-        name: "Wins",
-        showInLegend: true,
-        type: "area",
-        datapoints: [
-            { x: "Sept 3", y: 1 },
-            { x: "Sept 16", y: 2 },
-            { x: "Sept 17", y: 3 },
-            { x: "Sept 20", y: 4 },
-            { x: "Sept 27", y: 5 },
-            { x: "Oct 4", y: 6 },
-            { x: "Oct 7", y: 7 },
-            { x: "Oct 11", y: 8 },
-            { x: "Oct 13", y: 9 },
-            { x: "Oct 17", y: 10 },
-            { x: "Oct 21", y: 11 },
-           
-        ]
-    },
-    {
-        name: "Losses",
-        showInLegend: true,
-        type: "area",
-        datapoints: [
-            { x: "Sept 1", y: 1 },
-            { x: "Sept 9", y: 2 },
-            { x: "Sept 10", y: 3 },
-            { x: "Sept 23", y: 4 },
-
-        ]
-    },
-    {
-        name: "Generals Score",
-        showInLegend: true,
-        type: "area",
-        datapoints: [
-            { x: "Sept 1", y: 1 },
-            { x: "Sept 3", y: 2 },
-            { x: "Sept 9", y: 1 },
-            { x: "Sept 10", y: 0 },
-            { x: "Sept 16", y: 1 },
-            { x: "Sept 17", y: 2 },
-            { x: "Sept 20", y: 2 },
-            { x: "Sept 23", y: 1 },
-            { x: "Sept 27", y: 4 }, 
-            { x: "Oct 4", y: 5 },
-            { x: "Oct 7", y: 8 },
-            { x: "Oct 11", y: 4 },
-            { x: "Oct 13", y: 5 },
-            { x: "Oct 17", y: 2 },
-            { x: "Oct 21", y: 3 },
-        ]
-    },
-    {
-        name: "Oppenent Score",
-        showInLegend: true,
-        type: "area",
-        datapoints: [
-            { x: "Sept 1", y: 2 },
-            { x: "Sept 3", y: 1 },
-            { x: "Sept 9", y: 3 },
-            { x: "Sept 10", y: 2 },
-            { x: "Sept 16", y: 0 },
-            { x: "Sept 17", y: 1 },
-            { x: "Sept 20", y: 1 },
-            { x: "Sept 23", y: 4 },
-            { x: "Sept 27", y: 3 }, 
-            { x: "Oct 4", y: 2 },
-            { x: "Oct 7", y: 3 },
-            { x: "Oct 11", y: 3 },
-            { x: "Oct 13", y: 3 },
-            { x: "Oct 17", y: 0 },
-            { x: "Oct 21", y: 0 },
-        ]
-    },
+        labels: ["Sept 1", "Sept 3", "Sept 9", "Sept 10", "Sept 16", "Sept 17", "Sept 20", "Sept 23", "Sept 27", "Oct 4", "Oct 7", "Oct 11", "Oct 13", "Oct 17", "Oct 21"],   
+        datasets: [{
+            data: [0, 1, 1, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11],
+            label: "Wins", 
+            borderColor: "#46FF00",
+            fill: true
+        }, {
+            data: [1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4],
+            label: "Losses",
+            borderColor: "#FF0F00",
+            fill: true
+        }, {
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            label: "Ties",
+            borderColor: "#FFCD00",
+            fill: true
+        }, {
+            data: [1, 2, 1, 0, 1, 2, 2, 1, 4, 5, 8, 4, 5, 2, 3],
+            label: "Generals' Score", 
+            borderColor: "#071D76",
+            fill: false,
+            pointSize: 5, 
+            pointShape: 'star'
+        }, {
+            data: [2, 1, 3, 2, 0, 1, 1, 4, 3, 2, 3, 3, 3, 0, 0],
+            label: "Opponents' Score",
+            borderColor: "#646465",
+            fill: false,
+            pointSize: 5, 
+            pointShape: 'triangle'
+        }
+        ],       
     options: {
         scales: {
             yAxes: [{
@@ -102,7 +64,7 @@
         },
         maintainAspectRatio: false,
         responsive: false
-      }
+      },
     });
     </script>               
 </body>
