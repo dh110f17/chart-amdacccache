@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generals Field Hockey 2017</title>
+</head>
+<body>
+    <canvas id="myChart" width="600" height="500"></canvas> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        var chart = document.getElementById("myChart");
+        var chartObj = new Chart(chart, {
+    type: "line",
+    axisX: {
+        title: "Date of Game",
+        labels: ["Sept 1", "Sept 3", "Sept 9", "Sept 10", "Sept 16", "Sept 17", "Sept 20", "Sept 23", "Sept 27", "Oct 4", "Oct 7", "Oct 11", "Oct 13", "Oct 17", "Oct 21"]
+    },
+    axisY: {
+        title: "Score"
+    },
+    data: {
+        name: "Wins",
+        showInLegend: true,
+        type: "area",
+        datapoints: [
+            { x: "Sept 3", y: 1 },
+            { x: "Sept 16", y: 2 },
+            { x: "Sept 17", y: 3 },
+            { x: "Sept 20", y: 4 },
+            { x: "Sept 27", y: 5 },
+            { x: "Oct 4", y: 6 },
+            { x: "Oct 7", y: 7 },
+            { x: "Oct 11", y: 8 },
+            { x: "Oct 13", y: 9 },
+            { x: "Oct 17", y: 10 },
+            { x: "Oct 21", y: 11 },
+           
+        ]
+    },
+    {
+        name: "Losses",
+        showInLegend: true,
+        type: "area",
+        datapoints: [
+            { x: "Sept 1", y: 1 },
+            { x: "Sept 9", y: 2 },
+            { x: "Sept 10", y: 3 },
+            { x: "Sept 23", y: 4 },
+
+        ]
+    },
+    {
+        name: "Generals Score",
+        showInLegend: true,
+        type: "area",
+        datapoints: [
+            { x: "Sept 1", y: 1 },
+            { x: "Sept 3", y: 2 },
+            { x: "Sept 9", y: 1 },
+            { x: "Sept 10", y: 0 },
+            { x: "Sept 16", y: 1 },
+            { x: "Sept 17", y: 2 },
+            { x: "Sept 20", y: 2 },
+            { x: "Sept 23", y: 1 },
+            { x: "Sept 27", y: 4 }, 
+            { x: "Oct 4", y: 5 },
+            { x: "Oct 7", y: 8 },
+            { x: "Oct 11", y: 4 },
+            { x: "Oct 13", y: 5 },
+            { x: "Oct 17", y: 2 },
+            { x: "Oct 21", y: 3 },
+        ]
+    },
+    {
+        name: "Oppenent Score",
+        showInLegend: true,
+        type: "area",
+        datapoints: [
+            { x: "Sept 1", y: 2 },
+            { x: "Sept 3", y: 1 },
+            { x: "Sept 9", y: 3 },
+            { x: "Sept 10", y: 2 },
+            { x: "Sept 16", y: 0 },
+            { x: "Sept 17", y: 1 },
+            { x: "Sept 20", y: 1 },
+            { x: "Sept 23", y: 4 },
+            { x: "Sept 27", y: 3 }, 
+            { x: "Oct 4", y: 2 },
+            { x: "Oct 7", y: 3 },
+            { x: "Oct 11", y: 3 },
+            { x: "Oct 13", y: 3 },
+            { x: "Oct 17", y: 0 },
+            { x: "Oct 21", y: 0 },
+        ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      },
+      maintainAspectRatio: false,
+      responsive: false
+    }
+  });
+    </script>                 
+</body>
+</html>
